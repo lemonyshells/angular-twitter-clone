@@ -4,12 +4,7 @@
     <div class=" flex justify-center w-full">
 
     <!-- avatar circle -->
-        <div class="flex-shrink-0 mr-5">
-            <div class="cursor-pointer font-bold w-12 h-12 bg-gray-300
-            flex items-center justify-center rounded-full">
-                F
-            </div>
-        </div>
+    <app-avatar />
 
     <!-- form -->
         <div class="flex-1">
@@ -21,7 +16,8 @@
             rows="3" placeholder="What's happening...?" 
             [maxlength]="tweetMaxLength" 
             [(ngModel)]="tweetMessage"
-            (input)="changeTweet()">
+            (input)="changeTweet()"
+            (keyup.enter)="sendTweet()">
             </textarea>
 
             <!-- divider line -->
